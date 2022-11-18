@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Survey form</title>
+	<link rel="stylesheet" href="background/CSS/styles.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 id="title" class="title">Survey Form</h1>
+			<p id="description" class="description">Thank you for taking the time to help us improve the platform</p>
+		</header>
+		<form id="survey-form">
+			<div class="from-group">
+				<label id="name-label" for="name">Name</label>
+				<input type="text" name="name" id="name" class="form-input" placeholder="Enter your name" required>
+			</div>
+			<div class="from-group">
+				<label id="email-label" for="email">E-mail</label>
+				<input type="email" name="email" id="email" class="form-input" placeholder="Enter your e-mail" required>
+			</div>
+			<div class="from-group">
+				<label id="number-label" for="number">Age</label>
+				<input type="number" name="number" id="number" class="form-input" min="16" max="99" placeholder="Enter your age" required>
+			</div>
+			<div class="from-group">
+				<p>Which option best describes your current role?</p>
+				<select id="dropdown" class="form-input" name="role" required>
+					<option disabled selected value>Select current role</option>
+					<option value="student">Student</option>
+					<option value="job">Full-time job</option>
+					<option value="both">Student and full-time job</option>
+					<option value="non">Non</option>
+					<option value="preferNo">Prefer not to say</option>
+				</select>
+			</div>
+			<div class="from-group">
+				<p class="subtitle">Would you recommend our plataform to a friend?</p>
+				<label><input type="radio" name="user-recommend" value="definitely" class="input-radio" checked>Definitely</label>
+				<label><input type="radio" name="user-recommend" value="maybe" class="input-radio">Maybe</label>
+				<label><input type="radio" name="user-recommend" value="no" class="input-radio">Nops</label>
+			</div>
+			<div class="from-group">
+				<p class="subtitle">What would you like to see improved?</p>
+				<label><input type="checkbox" name="prefer" value="front-end-project" class="input-checkbox">Front-end project</label>
+				<label><input type="checkbox" name="prefer" value="back-end-project" class="input-checkbox">Back-end project</label>
+				<label><input type="checkbox" name="prefer" value="data-visualization" class="input-checkbox">Data-visualization</label>
+			</div>
+			<div class="from-group">
+				<p class="subtitle">Any comments or suggestions?</p>
+				<textarea id="comments" class="input-textarea" name="comment" rows="5" cols="30" placeholder="Enter your comment here..."></textarea>
+			</div>
+			<div class="from-group">
+				<button type="submit" id="submit" class="submit-btn">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
